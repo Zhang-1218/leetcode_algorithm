@@ -50,12 +50,12 @@ namespace heap_sort
 
 		void Sort()
 		{
-			for (int len = nums.size(); len > 0; len--)
+			for (int len = nums.size(); len > 0;)
 			{
 				// 输出堆顶元素（将堆顶最大或最小元素与堆底元素交换）
 				swap(nums[0], nums[len - 1]);
 				// 从头节点开始整理，对剩余的len-1个元素进行向下调整，重新成为大顶或小顶堆
-				AdjustDown(0, len--);
+				AdjustDown(0, --len);
 			}
 		}
 
